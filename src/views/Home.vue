@@ -64,7 +64,7 @@
               <p class="appeal">「シクラメン」</p>
             </div>
             <div class="sympathy_img">
-              <img src="../assets/レーシーフリルピーチ.jpg" alt="共感部">
+              <img src="../assets/fulil_peach.jpg" alt="共感部">
             </div>
           </div>
           <button onclick="location.href='https://shop.hayashiengei.com/'">オンラインショップを見てみる</button>
@@ -78,7 +78,7 @@
         <p class="sub_title">お手入れの心配なし</p>
         <div class="benefit_area">
           <div class="benefit_img">
-            <img src="../assets/レーシーフリルピーチ.jpg" alt="ベネフィット">
+            <img src="../assets/fulil_peach.jpg" alt="ベネフィット">
           </div>
           <div class="benefit_content">
             <p class="content_description">お手入れは他のお花と比較しても簡単で、面倒な人にほど飾って欲しい！</p>
@@ -91,13 +91,13 @@
         <p class="sub_title">空気を綺麗に！</p>
         <div class="benefit_area">
           <div class="benefit_img img_mobile">
-            <img src="../assets/レーシーフリルピーチ.jpg" alt="ベネフィット">
+            <img src="../assets/fulil_peach.jpg" alt="ベネフィット">
           </div>
           <div class="benefit_content">
             <p class="content_description2">植物をお部屋に置くと空気清浄の効果があると言われています。置いておくだけで一石二鳥ですね！</p>
           </div>
           <div class="benefit_img2 img_pc">
-            <img src="../assets/レーシーフリルピーチ.jpg" alt="ベネフィット">
+            <img src="../assets/fulil_peach.jpg" alt="ベネフィット">
           </div>
         </div>
         <div class="delimiter"></div>
@@ -107,7 +107,7 @@
         <p class="sub_title">癒しの効果あり</p>
         <div class="benefit_area">
           <div class="benefit_img">
-            <img src="../assets/レーシーフリルピーチ.jpg" alt="ベネフィット">
+            <img src="../assets/fulil_peach.jpg" alt="ベネフィット">
           </div>
           <div class="benefit_content">
             <p class="content_description">鉢植えのお花なのでカゴに入れたりして雰囲気に合わせてアレンジ可能です！お花風水的にも良い運気が入ってきますよ！</p>
@@ -128,7 +128,7 @@
       </div>
       <div class="home_layout">
         <h2>これだけでもお部屋が華やかに！</h2>
-        <img src="../assets/レーシーフリルピーチ.jpg" alt="ベネフィット">
+        <img src="../assets/fulil_peach.jpg" alt="ベネフィット">
         <div class="delimiter"></div>
         <!-- スライドショー -->
       </div>
@@ -155,7 +155,7 @@
       <div class="product_area">
         <div class="product">
           <div class="product_image">
-            <img src="../assets/レーシーフリルピーチ.jpg" alt="ベネフィット">
+            <img src="../assets/fulil_peach.jpg" alt="ベネフィット">
           </div>
           <div class="product_description">
             <p>名前：○○○○○○○</p>
@@ -165,7 +165,7 @@
         </div>
         <div class="product">
           <div class="product_image">
-            <img src="../assets/レーシーフリルピーチ.jpg" alt="ベネフィット">
+            <img src="../assets/fulil_peach.jpg" alt="ベネフィット">
           </div>
           <div class="product_description">
             <p>名前：○○○○○○○</p>
@@ -175,7 +175,7 @@
         </div>
         <div class="product">
           <div class="product_image">
-            <img src="../assets/レーシーフリルピーチ.jpg" alt="ベネフィット">
+            <img src="../assets/fulil_peach.jpg" alt="ベネフィット">
           </div>
           <div class="product_description">
             <p>名前：○○○○○○○</p>
@@ -185,7 +185,7 @@
         </div>
         <div class="product">
           <div class="product_image">
-            <img src="../assets/レーシーフリルピーチ.jpg" alt="ベネフィット">
+            <img src="../assets/fulil_peach.jpg" alt="ベネフィット">
           </div>
           <div class="product_description">
             <p>名前：○○○○○○○</p>
@@ -237,11 +237,11 @@
       <h2>シクラメンお役立ち情報</h2>
       <div class="sns">
         <div class="info">
-          <img src="../assets/レーシーフリルピーチ.jpg" alt="line">
+          <img src="../assets/fulil_peach.jpg" alt="line">
           <p>公式ラインアカウントでは、シクラメンを長く楽しむワンポイントアドバイスなど役立つ情報を配信していきます。</p>
         </div>
         <div class="info">
-          <img src="../assets/レーシーフリルピーチ.jpg" alt="instagram">
+          <img src="../assets/fulil_peach.jpg" alt="instagram">
           <p>シクラメンのギャラリーでは、これまでのシクラメンを覗いてみたい方</p>
         </div>
       </div>
@@ -272,7 +272,7 @@
       <h2>会社情報</h2>
       <div class="company_detail">
         <div class="map_img">
-          <img src="../assets/レーシーフリルピーチ.jpg" alt="map">
+          <img src="../assets/fulil_peach.jpg" alt="map">
         </div>
         <div class="company_info">
           <h3>有限会社 林園芸</h3>

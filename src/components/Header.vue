@@ -5,11 +5,11 @@
     </div>
     <div class="header-nav">
       <ul class="flex_content">
-        <li>シクラメンとは？</li>
-        <li>選ばれる理由</li>
-        <li>ラインナップ</li>
-        <li>お役立ち情報</li>
-        <li>会社概要</li>
+        <li><a v-scroll-to="'.summary'">シクラメンとは？</a></li>
+        <li><a v-scroll-to="'.benefit_contents'">選ばれる理由</a></li>
+        <li><a v-scroll-to="'.lineup_area'">ラインナップ</a></li>
+        <li><a v-scroll-to="'.information'">お役立ち情報</a></li>
+        <li><a v-scroll-to="'.company'">会社概要</a></li>
       </ul>
     </div>
     <div class="hamburger" @click="humberger()" :class="{'active':isClass}">
@@ -21,19 +21,19 @@
       <p class="menu-title">Hayashi-engei</p>
       <ul class="menu-content_inner">
         <li>
-          <a href="#">シクラメンとは？</a>
+          <a v-scroll-to="'.summary'">シクラメンとは？</a>
         </li>
         <li>
-          <a href="#">選ばれる理由</a>
+          <a v-scroll-to="'.benefit_contents'">選ばれる理由</a>
         </li>
         <li>
-          <a href="#">ラインナップ</a>
+          <a v-scroll-to="'.lineup_area'">ラインナップ</a>
         </li>
         <li>
-          <a href="#">お役立ち情報</a>
+          <a v-scroll-to="'.information'">お役立ち情報</a>
         </li>
         <li>
-          <a href="#">会社概要</a>
+          <a v-scroll-to="'.company'">会社概要</a>
         </li>
       </ul>
     </nav>
@@ -45,14 +45,14 @@ export default {
   data() {
     return {
       isClass: false,
+      testBlock: "contact"
     };
   },
   methods: {
     humberger() {
       this.isClass = !this.isClass
     }
-  },
-  
+  }
 }
 </script>
 
@@ -64,7 +64,7 @@ export default {
   align-items: center;
   justify-content: center;
   position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
   top: 0;
 }
 
@@ -74,6 +74,10 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 300;
 }
 
 

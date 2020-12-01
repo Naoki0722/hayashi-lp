@@ -248,25 +248,27 @@
     </div>
     <div class="contact">
       <h2>お問い合わせ</h2>
-      <table class="contact_form">
-        <tr>
-          <th>名前</th>
-          <td><input type=" text" name="namae" id="name1" placeholder="山田 太郎"></td>
-        </tr>
-        <tr>
-          <th>メールアドレス</th>
-          <td><input type=" text" name="email" id="mail" placeholder="taro@test.com"></td>
-        </tr>
-        <tr>
-          <th>電話番号</th>
-          <td><input type=" text" name="tell" id="tell" placeholder="090-0000-0000"></td>
-        </tr>
-        <tr>
-          <th>お問い合わせ内容</th>
-          <td><textarea placeholder="お問合せ内容を記載ください"></textarea></td>
-        </tr>
-      </table>
-      <button class="contact_submit">送信</button>
+      <form name="contact" method="POST" netlify>
+        <table class="contact_form">
+          <tr>
+            <th>名前</th>
+            <td><input type=" text" name="namae" id="name1" placeholder="山田 太郎"></td>
+          </tr>
+          <tr>
+            <th>メールアドレス</th>
+            <td><input type=" text" name="email" id="mail" placeholder="taro@test.com"></td>
+          </tr>
+          <tr>
+            <th>電話番号</th>
+            <td><input type=" text" name="tell" id="tell" placeholder="090-0000-0000"></td>
+          </tr>
+          <tr>
+            <th>お問い合わせ内容</th>
+            <td><textarea placeholder="お問合せ内容を記載ください"></textarea></td>
+          </tr>
+        </table>
+      <button class="contact_submit" type="submit">送信</button>
+      </form>
     </div>
     <div class="company">
       <h2>会社情報</h2>
@@ -285,6 +287,12 @@
 
 <script>
 export default {
+  methods: {
+    scrollToAnchorPoint(refName) {
+      const el = this.$refs[refName]
+      el.scrollIntoView({behavior: 'smooth'})
+    }
+  }
   
 }
 </script>

@@ -36,7 +36,7 @@
                 </slide>
               </carousel>
               <div class="contents_block">
-                <p class="first-text">花は見るだけでも嬉しい気持ちになります。大切な人が笑顔になってくれたら・・・</p>
+                <p class="first-text">花は見るだけでも嬉しい気持ちになります。もし、大切な人が笑顔になってくれたら・・・</p>
                 <p class="second-text">という思いで、私たちはシクラメンを販売しています。</p>
               </div>
             </div>
@@ -229,7 +229,7 @@
         <p>※その他都道府県は、ショップでご確認頂けます。</p>
       </div>
       <div class="cta_area">
-        <p>オンラインショップにて販売中です！</p>
+        <p>オンラインショップで販売中！</p>
         <button onclick="location.href='https://shop.hayashiengei.com/'">シクラメンオンラインショップ</button>
       </div>
     </div>
@@ -336,13 +336,14 @@ export default {
     top: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
-    line-height: 30px;
+    line-height: 25px;
     width: 80%;
     padding: 3% 1%;
   }
 
   .comp_title {
     text-align: right;
+    font-family: "Times New Roman", "YuMincho", "Hiragino Mincho ProN", "Yu Mincho", "MS PMincho", serif;
     color: rgba(255, 20, 203, 1);
     padding: 3%;
     font-size: 1.3rem;
@@ -431,8 +432,9 @@ export default {
     background-color: #FFDEDE;
     border: none;
     border-radius: 10px;
-    padding: 10px 8px;
+    padding: 10px 20px;
     margin: 30px 0;
+    font-weight: bold;
   }
 
   .delimiter {
@@ -547,8 +549,7 @@ export default {
   .solution_area {
     border: 1px solid gray;
     border-radius: 10px;
-    width: 85%;
-    margin: 0 auto;
+    margin: 0 10%;
     position: relative;
     padding-bottom: 4%;
   }
@@ -560,7 +561,7 @@ export default {
     border: none;
     border-radius: 10px;
     width: 85%;
-    padding: 10px 0;
+    padding: 10px 2%;
     margin: 0 auto 10px;
     position: absolute;
     top: -20px;
@@ -571,7 +572,6 @@ export default {
   .solution_area ol {
     width: 60%;
     margin: 40px auto 0;
-    /* text-align: center; */
   }
 
   .solution_area li {
@@ -656,8 +656,9 @@ export default {
     background-color: #FFDEDE;
     border: none;
     border-radius: 10px;
-    padding: 10px 8px;
+    padding: 10px 20px;
     margin: 30px 0 10px;
+    font-weight: bold;
   }
 
   .information {
@@ -727,7 +728,8 @@ export default {
     width: 93%;
     border: none;
     background-color: #f8f8f8;
-    margin: 5px 3%;
+    display: block;
+    margin: 5px auto;
   }
 
   .contact_form input {
@@ -907,7 +909,7 @@ export default {
     }
 
     .solution_area {
-      width: 60%;
+      margin: 0 20%;
       padding-bottom: 2%;
     }
     .solution_area ol {
@@ -917,6 +919,10 @@ export default {
     
     .solution_area li {
       padding: 10px 0;
+    }
+    .solution_area h3 {
+      padding: 10px 0;
+      width: 55%;
     }
     
     .shipping {

@@ -254,7 +254,7 @@
     </div>
     <div class="contact">
       <h2>お問い合わせ</h2>
-      <form name="contact" method="POST" data-netlify="true">
+      <!-- <form name="contact" method="POST" data-netlify="true">
         <input type="hidden" name="form-name" value="contact" />
         <table class="contact_form">
           <tr>
@@ -275,23 +275,15 @@
           </tr>
         </table>
         <button class="contact_submit" type="submit">送信</button>
-      </form>
+      </form> -->
     </div>
     <P>テスト中コードなので気にしないでください</P>
     <form name="contact" method="POST" data-netlify="true">
-    <input type="hidden" name="form-name" value="contact" />
-    <p>
-      <label>Your Name: <input type="text" name="name" /></label>   
-    </p>
-    <p>
-      <label>Your Email: <input type="email" name="email" /></label>
-    </p>
-    <p>
-      <label>Message: <textarea name="message"></textarea></label>
-    </p>
-    <p>
-      <button type="submit">Send</button>
-    </p>
+      <input type="hidden" name="form-name" value="contact" />
+      <label>お名前: <input type="text" name="name" /></label>
+      <label>email: <input type="email" name="email" /></label>
+      <label>内容:<textarea name="message"></textarea></label>
+      <button type="submit">送信する</button>
     </form>
     <div class="company">
       <h2>会社情報</h2>

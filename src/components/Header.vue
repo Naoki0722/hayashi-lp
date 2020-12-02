@@ -172,6 +172,7 @@ header {
   left: 0;
 }
 
+
 /* タブレット縦 /スマートフォン横 */
 @media screen and (min-width: 481px) {
 
@@ -201,6 +202,10 @@ header {
   }
   .flex_content li {
     margin: 0 1%;
+  }
+
+  .flex_content a:hover {
+    cursor: pointer;
   }
 }
 </style>

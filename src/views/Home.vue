@@ -4,7 +4,7 @@
       <div class="top">
         <div class="block block_two">
           <div class="top_eyecatch">
-            <img class="top_image" src="../assets/2020シクラメンハウス写真.jpg" alt="シクラメンハウス写真">
+            <img class="top_image" src="../assets/383637_s.jpg" alt="シクラメンハウス写真">
             <h2>人との絆が深まる<br>「キズナ」を繋ぐ花屋さん</h2>
             <h3 class="comp_title">有限会社 林園芸</h3>
           </div>
@@ -31,7 +31,7 @@
                 </slide>
                 <slide>
                   <div class="image_block">
-                    <img src="../assets/burano-1962852_640.jpg" alt="部屋の例2">
+                    <img src="../assets/2056956_s.jpg" alt="部屋の例2">
                   </div>
                 </slide>
               </carousel>
@@ -64,10 +64,12 @@
               <p class="appeal">「シクラメン」</p>
             </div>
             <div class="sympathy_img">
-              <img src="../assets/fulil_peach.jpg" alt="共感部">
+              <img src="../assets/3936886_s.jpg" alt="共感部">
             </div>
           </div>
-          <button onclick="location.href='https://shop.hayashiengei.com/'">オンラインショップを見てみる</button>
+          <button onclick="location.href='https://shop.hayashiengei.com/'">
+            オンラインショップを見てみる
+          </button>
           <div class="delimiter"></div>
         </div>
       </div>
@@ -78,7 +80,7 @@
         <p class="sub_title">お手入れの心配なし</p>
         <div class="benefit_area">
           <div class="benefit_img">
-            <img src="../assets/fulil_peach.jpg" alt="ベネフィット">
+            <img src="../assets/3011838_s.jpg" alt="ベネフィット">
           </div>
           <div class="benefit_content">
             <p class="content_description">お手入れは他のお花と比較しても簡単で、面倒な人にほど飾って欲しい！</p>
@@ -91,7 +93,7 @@
         <p class="sub_title">空気を綺麗に！</p>
         <div class="benefit_area">
           <div class="benefit_img img_mobile">
-            <img src="../assets/fulil_peach.jpg" alt="ベネフィット">
+            <img src="../assets/2331306_s.jpg" alt="ベネフィット">
           </div>
           <div class="benefit_content">
             <p class="content_description2">植物をお部屋に置くと空気清浄の効果があると言われています。置いておくだけで一石二鳥ですね！</p>
@@ -107,7 +109,7 @@
         <p class="sub_title">癒しの効果あり</p>
         <div class="benefit_area">
           <div class="benefit_img">
-            <img src="../assets/fulil_peach.jpg" alt="ベネフィット">
+            <img src="../assets/2105558_s.jpg" alt="ベネフィット">
           </div>
           <div class="benefit_content">
             <p class="content_description">鉢植えのお花なのでカゴに入れたりして雰囲気に合わせてアレンジ可能です！お花風水的にも良い運気が入ってきますよ！</p>
@@ -128,7 +130,7 @@
       </div>
       <div class="home_layout">
         <h2>これだけでもお部屋が華やかに！</h2>
-        <img src="../assets/fulil_peach.jpg" alt="ベネフィット">
+        <img src="../assets/burano-1962852_640.jpg" alt="ベネフィット">
         <div class="delimiter"></div>
         <!-- スライドショー -->
       </div>
@@ -237,17 +239,23 @@
       <h2>シクラメンお役立ち情報</h2>
       <div class="sns">
         <div class="info">
-          <img src="../assets/fulil_peach.jpg" alt="line">
+          <a href="https://lin.ee/25rISys" target="_blank" rel="noopener noreferrer">
+            <img src="../assets/line.jpg" alt="line">
+          </a>
           <p>公式ラインアカウントでは、シクラメンを長く楽しむワンポイントアドバイスなど役立つ情報を配信していきます。</p>
         </div>
         <div class="info">
-          <img src="../assets/fulil_peach.jpg" alt="instagram">
+          <a href="https://www.instagram.com/cyclamen_hayashi87/" target="_blank" rel="noopener noreferrer">
+            <img src="../assets/instagram.jpg" alt="instagram">
+          </a>
           <p>シクラメンのギャラリーでは、これまでのシクラメンを覗いてみたい方</p>
         </div>
       </div>
     </div>
     <div class="contact">
       <h2>お問い合わせ</h2>
+      <form name="contact" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="contact" />
         <table class="contact_form">
           <tr>
             <th>名前</th>
@@ -266,32 +274,19 @@
             <td><textarea placeholder="お問合せ内容を記載ください"></textarea></td>
           </tr>
         </table>
-      <button class="contact_submit" type="submit">送信</button>
+        <button class="contact_submit" type="submit">送信</button>
+      </form>
     </div>
-    <P>テスト中コードなので気にしないでください</P>
-    <form name="contact" method="POST" data-netlify="true">
-    <p>
-      <label>Your Name: <input type="text" name="name" /></label>   
-    </p>
-    <p>
-      <label>Your Email: <input type="email" name="email" /></label>
-    </p>
-    <p>
-      <label>Message: <textarea name="message"></textarea></label>
-    </p>
-    <p>
-      <button type="submit">Send</button>
-    </p>
-    </form>
     <div class="company">
       <h2>会社情報</h2>
       <div class="company_detail">
         <div class="map_img">
-          <img src="../assets/fulil_peach.jpg" alt="map">
+          <img src="../assets/map.jpg" alt="map">
         </div>
         <div class="company_info">
           <h3>有限会社 林園芸</h3>
           <p>〒378-0066 群馬県沼田市原町８８番地</p>
+          <p>(月夜野ICを降りて車で約2分)</p>
         </div>
       </div>
     </div>
@@ -354,12 +349,13 @@ export default {
     font-family: "Times New Roman", "YuMincho", "Hiragino Mincho ProN", "Yu Mincho", "MS PMincho", serif;
     color: rgb(85, 84, 84);
     position: absolute;
-    top: 20%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     line-height: 25px;
-    width: 80%;
-    padding: 3% 1%;
+    width: 75%;
+    padding: 3% 0;
+
   }
 
   .comp_title {
@@ -456,6 +452,12 @@ export default {
     padding: 10px 20px;
     margin: 30px 0;
     font-weight: bold;
+  }
+
+  .sympathy_part button:hover {
+    cursor: pointer;
+    background-color: #ffa6a6;
+    transition: 0.5s;
   }
 
   .delimiter {
@@ -682,6 +684,12 @@ export default {
     font-weight: bold;
   }
 
+  .cta_area button:hover {
+    cursor: pointer;
+    background-color: #ffa6a6;
+    transition: 0.5s;
+  }
+
   .information {
     margin: 10%;
   }
@@ -693,18 +701,25 @@ export default {
   }
 
   .sns {
-    text-align: center;
     display: flex;
     justify-content: space-around;
   }
 
   .info {
     padding: 10px;
+    width: 40%;
+    text-align: center;
   }
 
   .info img {
-    width: 60%;
+    width: 30%;
     margin: 10px 0 40px;
+  }
+
+  .info p {
+    width: 80%;
+    margin: 0 auto;
+    text-align: left;
   }
 
   .contact {
@@ -748,7 +763,6 @@ export default {
   .contact_form textarea {
     width: 93%;
     border: none;
-    background-color: #f8f8f8;
     display: block;
     margin: 5px auto;
   }
@@ -797,6 +811,10 @@ export default {
     margin: 0 5%;
   }
 
+  .company_info p {
+    padding: 10px 0;
+  }
+
   /* タブレット縦 /スマートフォン横 */
   @media screen and (min-width: 481px) {
     .top_eyecatch h2 {
@@ -820,7 +838,7 @@ export default {
     }
     .top_eyecatch h2 {
       font-size: 1.8rem;
-      width: 50%;
+      width: 40%;
       top: 20%;
       line-height: 50px;
 
@@ -864,6 +882,9 @@ export default {
     .sympathy_img  {
       width: 80%;
       margin-right: 2%;
+    }
+    .sympathy_part button {
+      padding: 20px 30px;
     }
     
     .prev_appeal {
@@ -959,6 +980,9 @@ export default {
       text-align: center;
     }
 
+    .cta_area button {
+      padding: 20px 30px;
+    }
     .contact_form {
       width: 50%;
     }

@@ -21,17 +21,22 @@
                 </slide>
                 <slide>
                   <div class="image_block">
-                    <img src="../assets/879429_s.jpg" alt="部屋の例2">
+                    <img src="../assets/302624_s.jpg" alt="部屋の例2">
                   </div>
                 </slide>
                 <slide>
                   <div class="image_block">
-                    <img src="../assets/3862787_s.jpg" alt="部屋の例2">
+                    <img src="../assets/879429_s.jpg" alt="部屋の例3">
                   </div>
                 </slide>
                 <slide>
                   <div class="image_block">
-                    <img src="../assets/2056956_s.jpg" alt="部屋の例2">
+                    <img src="../assets/3862787_s.jpg" alt="部屋の例4">
+                  </div>
+                </slide>
+                <slide>
+                  <div class="image_block">
+                    <img src="../assets/2056956_s.jpg" alt="部屋の例5">
                   </div>
                 </slide>
               </carousel>
@@ -149,92 +154,7 @@
         </div>
       </div>
     </div>
-    <div class="lineup_area">
-      <div class="lineup_title">
-        <h2>ラインナップ</h2>
-        <p>色に応じた商品をご準備しております。</p>
-      </div>
-      <div class="product_area">
-        <div class="product">
-          <div class="product_image">
-            <img src="../assets/fulil_peach.jpg" alt="ベネフィット">
-          </div>
-          <div class="product_description">
-            <p>名前：○○○○○○○</p>
-            <p>販売価格：○○○円</p>
-            <p>特徴：何か商品にこだわりあれば</p>
-          </div>
-        </div>
-        <div class="product">
-          <div class="product_image">
-            <img src="../assets/fulil_peach.jpg" alt="ベネフィット">
-          </div>
-          <div class="product_description">
-            <p>名前：○○○○○○○</p>
-            <p>販売価格：○○○円</p>
-            <p>特徴：何か商品にこだわりあれば</p>
-          </div>
-        </div>
-        <div class="product">
-          <div class="product_image">
-            <img src="../assets/fulil_peach.jpg" alt="ベネフィット">
-          </div>
-          <div class="product_description">
-            <p>名前：○○○○○○○</p>
-            <p>販売価格：○○○円</p>
-            <p>特徴：何か商品にこだわりあれば</p>
-          </div>
-        </div>
-        <div class="product">
-          <div class="product_image">
-            <img src="../assets/fulil_peach.jpg" alt="ベネフィット">
-          </div>
-          <div class="product_description">
-            <p>名前：○○○○○○○</p>
-            <p>販売価格：○○○円</p>
-            <p>特徴：何か商品にこだわりあれば</p>
-          </div>
-        </div>
-      </div>
-      <div class="shipping_info">
-        <h2 class="shipping_title">送料(代表地域)</h2>
-        <table class="shipping">
-          <tr>
-            <th>北海道</th>
-            <td>¥1,190</td>
-          </tr>
-          <tr>
-            <th>東京</th>
-            <td>¥860</td>
-          </tr>
-          <tr>
-            <th>大阪</th>
-            <td>¥960</td>
-          </tr>
-          <tr>
-            <th>広島</th>
-            <td>¥1,040</td>
-          </tr>
-          <tr>
-            <th>愛媛</th>
-            <td>¥1,040</td>
-          </tr>
-          <tr>
-            <th>福岡</th>
-            <td>¥1,190</td>
-          </tr>
-          <tr>
-            <th>沖縄</th>
-            <td>¥1,380</td>
-          </tr>
-        </table>
-        <p>※その他都道府県は、ショップでご確認頂けます。</p>
-      </div>
-      <div class="cta_area">
-        <p>オンラインショップで販売中！</p>
-        <button onclick="location.href='https://shop.hayashiengei.com/'">シクラメンオンラインショップ</button>
-      </div>
-    </div>
+    <ProductFlower />
     <div class="information">
       <h2>シクラメンお役立ち情報</h2>
       <div class="sns">
@@ -254,20 +174,20 @@
     </div>
     <div class="contact">
       <h2>お問い合わせ</h2>
-      <!-- <form name="contact" method="POST" data-netlify="true">
+      <form name="contact" method="POST" netlify netlify-honeypod="bot-field">
         <input type="hidden" name="form-name" value="contact" />
         <table class="contact_form">
           <tr>
             <th>名前</th>
-            <td><input type=" text" name="namae" id="name1" placeholder="山田 太郎"></td>
+            <td><input type="text" name="namae" id="name1" placeholder="山田 太郎"></td>
           </tr>
           <tr>
             <th>メールアドレス</th>
-            <td><input type=" text" name="email" id="mail" placeholder="taro@test.com"></td>
+            <td><input type="text" name="email" id="mail" placeholder="taro@test.com"></td>
           </tr>
           <tr>
             <th>電話番号</th>
-            <td><input type=" text" name="tell" id="tell" placeholder="090-0000-0000"></td>
+            <td><input type="text" name="tell" id="tell" placeholder="090-0000-0000"></td>
           </tr>
           <tr>
             <th>お問い合わせ内容</th>
@@ -275,16 +195,8 @@
           </tr>
         </table>
         <button class="contact_submit" type="submit">送信</button>
-      </form> -->
+      </form>
     </div>
-    <!-- <P>テスト中コードなので気にしないでください</P> -->
-    <!-- <form name="contact" method="POST" data-netlify="true">
-      <input type="hidden" name="form-name" value="contact" />
-      <label>お名前: <input type="text" name="name" /></label>
-      <label>email: <input type="email" name="email" /></label>
-      <label>内容:<textarea name="message"></textarea></label>
-      <button type="submit">送信する</button>
-    </form> -->
     <div class="company">
       <h2>会社情報</h2>
       <div class="company_detail">
@@ -302,14 +214,17 @@
 </template>
 
 <script>
+import ProductFlower from '../components/ProductFlower'
 export default {
   methods: {
     scrollToAnchorPoint(refName) {
       const el = this.$refs[refName]
       el.scrollIntoView({behavior: 'smooth'})
     }
+  },
+  components: {
+    ProductFlower,
   }
-  
 }
 </script>
 
@@ -609,95 +524,6 @@ export default {
     margin: 10px 0;
   }
 
-  .lineup_area {
-    margin: 40px 0;
-    background: rgba(173, 173, 173, 0.12);
-  }
-
-  .lineup_title {
-    text-align: center;
-    padding: 40px 0;
-  }
-
-  .lineup_title h2 {
-    font-size: 1.6rem;
-    padding-bottom: 25px;
-  }
-
-  .product_area {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-
-  .product {
-    width: 40%;
-  }
-
-  .product_image img {
-    width: 90%;
-    margin: 20px auto;
-  }
-
-  .shipping_title {
-    margin: 50px 0 30px;
-    text-align: center;
-    font-size: 1.6rem;
-  }
-
-  .shipping {
-    margin: 30px auto 10px;
-    width: 70%;
-  }
-
-  .shipping tr {
-    border: 1px solid gray;
-  }
-
-  .shipping th {
-    border-right: 1px solid gray;
-  }
-
-  .shipping th,
-  .shipping td {
-    padding: 10px 20px;
-    text-align: center;
-  }
-
-  .shipping_info p {
-    width: 70%;
-    margin: 0 auto;
-  }
-
-  .cta_area {
-    text-align: center;
-    margin: 20px;
-    padding-bottom: 20px;
-  }
-
-  .cta_area p {
-    padding: 20px;
-    font-size: 1.2rem;
-    color: red;
-    text-decoration:  underline;
-    font-weight: bold;
-  }
-
-  .cta_area button {
-    background-color: #FFDEDE;
-    border: none;
-    border-radius: 10px;
-    padding: 10px 20px;
-    margin: 30px 0 10px;
-    font-weight: bold;
-  }
-
-  .cta_area button:hover {
-    cursor: pointer;
-    background-color: #ffa6a6;
-    transition: 0.5s;
-  }
-
   .information {
     margin: 10%;
   }
@@ -974,23 +800,7 @@ export default {
       padding: 10px 0;
       width: 55%;
     }
-    
-    .shipping {
-      width: 60%;
-    }
 
-    .shipping th,
-    .shipping td {
-      padding: 15px 0;
-    }
-    
-    .shipping_info p {
-      text-align: center;
-    }
-
-    .cta_area button {
-      padding: 20px 30px;
-    }
     .contact_form {
       width: 50%;
     }

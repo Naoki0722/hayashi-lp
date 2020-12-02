@@ -277,14 +277,14 @@
         <button class="contact_submit" type="submit">送信</button>
       </form> -->
     </div>
-    <P>テスト中コードなので気にしないでください</P>
-    <form name="contact" method="POST" data-netlify="true">
+    <!-- <P>テスト中コードなので気にしないでください</P> -->
+    <!-- <form name="contact" method="POST" data-netlify="true">
       <input type="hidden" name="form-name" value="contact" />
       <label>お名前: <input type="text" name="name" /></label>
       <label>email: <input type="email" name="email" /></label>
       <label>内容:<textarea name="message"></textarea></label>
       <button type="submit">送信する</button>
-    </form>
+    </form> -->
     <div class="company">
       <h2>会社情報</h2>
       <div class="company_detail">

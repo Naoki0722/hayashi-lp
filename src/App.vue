@@ -2,6 +2,13 @@
   <div id="app">
     <Header></Header>
     <router-view />
+    <form name="contact" method="POST" data-netlify="true">
+      <input type="hidden" name="form-name" value="contact" />
+      <label>お名前: <input type="text" name="name" /></label>
+      <label>email: <input type="email" name="email" /></label>
+      <label>内容:<textarea name="message"></textarea></label>
+      <button type="submit">送信する</button>
+    </form>
     <Footer></Footer>
   </div>
 </template>

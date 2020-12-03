@@ -226,10 +226,11 @@ import ProductFlower from '../components/ProductFlower'
 export default {
   data() {
     return {
-      name: "",
-      email: "",
-      message: ""
-    }
+      form: {
+        name: "",
+        email: "",
+        message: ""
+      }
   },
   methods: {
     scrollToAnchorPoint(refName) {

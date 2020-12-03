@@ -54,18 +54,15 @@
           <h2>こんなご経験ありませんか？</h2>
           <div class="sympathy_block">
             <div class="sympathy_contents">
-              <ul>
-                <li>大切な人に感謝の気持ちを伝えたい</li>
-                <li>特別な日に彩りを作りたい</li>
-                <li>自宅に癒しが欲しい</li>
-                <li>花をプレゼントしたい</li>
-              </ul>
-              <p class="prev_appeal">でもどんな花がいいんだろう・・・<br>そんな時におすすめの花が</p>
-              <!-- <div class="formBalloon">
-                <div class="formBalloonContent"></div>
-                <div class="formBalloonArrow"></div>
-              </div> -->
-              <!-- <p>そんな時におすすめの花が</p> -->
+              <div class="ul_list">
+                <ul>
+                  <li>大切な人に感謝の気持ちを伝えたい</li>
+                  <li>特別な日に彩りを作りたい</li>
+                  <li>自宅に癒しが欲しい</li>
+                  <li>花をプレゼントしたい</li>
+                </ul>
+              </div>
+              <p class="prev_appeal">でもどんな花がいいんだろう・・・<br>⇨そんな時におすすめの花が</p>
               <p class="appeal">「シクラメン」</p>
             </div>
             <div class="sympathy_img">
@@ -85,7 +82,7 @@
         <p class="sub_title">お手入れの心配なし</p>
         <div class="benefit_area">
           <div class="benefit_img">
-            <img src="../assets/3011838_s.jpg" alt="ベネフィット">
+            <img v-lazy="require('../assets/3011838_s.jpg')" alt="ベネフィット">
           </div>
           <div class="benefit_content">
             <p class="content_description">お手入れは他のお花と比較しても簡単で、面倒な人にほど飾って欲しい！</p>
@@ -98,13 +95,13 @@
         <p class="sub_title">空気を綺麗に！</p>
         <div class="benefit_area">
           <div class="benefit_img img_mobile">
-            <img src="../assets/2331306_s.jpg" alt="ベネフィット">
+            <img v-lazy="require('../assets/2331306_s.jpg')" alt="ベネフィット">
           </div>
           <div class="benefit_content">
             <p class="content_description2">植物をお部屋に置くと空気清浄の効果があると言われています。置いておくだけで一石二鳥ですね！</p>
           </div>
           <div class="benefit_img2 img_pc">
-            <img src="../assets/fulil_peach.jpg" alt="ベネフィット">
+            <img v-lazy="require('../assets/fulil_peach.jpg')" alt="ベネフィット">
           </div>
         </div>
         <div class="delimiter"></div>
@@ -114,7 +111,7 @@
         <p class="sub_title">癒しの効果あり</p>
         <div class="benefit_area">
           <div class="benefit_img">
-            <img src="../assets/2105558_s.jpg" alt="ベネフィット">
+            <img v-lazy="require('../assets/2105558_s.jpg')" alt="ベネフィット">
           </div>
           <div class="benefit_content">
             <p class="content_description">鉢植えのお花なのでカゴに入れたりして雰囲気に合わせてアレンジ可能です！お花風水的にも良い運気が入ってきますよ！</p>
@@ -148,8 +145,8 @@
           <h3>その不安、しっかりケアします！</h3>
           <ol>
             <li>一人ひとりのお客様に合ったシクラメンを提供</li>
-            <li>シクラメン専用の段ボール箱で発送</li>
-            <li>万一不良品があっても代替品を発送！</li>
+            <li>シクラメン専用の段ボール箱で発送いたします！</li>
+            <li>万一不良品があっても代替品を発送いたします！</li>
           </ol>
         </div>
       </div>
@@ -174,6 +171,7 @@
     </div>
     <div class="contact">
       <h2>お問い合わせ</h2>
+      <p>※下記の項目をご入力ください</p>
       <form
         name="contact"
         method="POST"
@@ -184,24 +182,24 @@
         <input type="hidden" name="form-name" value="contact" />
         <div>
           <label for="name">
-            お名前
             <span>*</span>
+            お名前
           </label>
-          <input type="text" id="name" name="name" required />
+          <input type="text" id="name" name="name" placeholder="山田太郎" required />
         </div>
         <div>
           <label for="mail">
-            メールアドレス
             <span>*</span>
+            メールアドレス
           </label>
-          <input type="email" id="mail" name="email" required />
+          <input type="email" id="mail" name="email" placeholder="sample@sample.com" required />
         </div>
         <div>
           <label for="msg">
-            お問い合わせ内容
             <span>*</span>
+            お問い合わせ内容
           </label>
-          <textarea id="msg" name="message" required></textarea>
+          <textarea id="msg" name="message" placeholder="お問い合わせ内容を記載ください" required></textarea>
         </div>
         <button class="contact_submit" type="submit">送信</button>
       </form>
@@ -512,7 +510,7 @@ export default {
   }
 
   .solution_area h3 {
-    font-size: 1.1rem;
+    font-size: 1em;
     background-color: #FFD7D7;
     text-align: center;
     border: none;
@@ -546,30 +544,31 @@ export default {
   }
 
   .sns {
-    display: flex;
-    justify-content: space-around;
+    display: block;
+    margin: 0 auto;
   }
 
   .info {
     padding: 10px;
-    width: 40%;
+    /* width: 80%; */
     text-align: center;
   }
 
   .info img {
-    width: 50%;
+    width: 30%;
     margin: 10px 0 40px;
   }
 
   .info p {
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     text-align: left;
   }
 
   .contact {
-    margin: 10% auto;
-    width: 90%;
+    margin: 10% 20%;
+    /* width: 90%; */
+    /* text-align: center; */
   }
 
   .contact h2 {
@@ -578,46 +577,15 @@ export default {
     margin: 60px 0 30px;
   }
 
-
-  .contact_form {
-    border: 1px solid gray;
-    border-bottom: none;
+  .contact p {
+    text-align: center;
+  }
+  .contact label,
+  .contact input,
+  .contact textarea {
+    display: block;
     margin: 0 auto;
-    width: 70%;
-  }
-
-
-  .contact_form th,
-  .contact_form td {
-    display: block;
-  }
-
-  .contact_form th,
-  .contact_form td {
-    border-bottom: 1px solid gray;
     width: 100%;
-  }
-
-  .contact_form th {
-    height: 40px;
-    line-height: 40px;
-    background-color: rgba(255, 211, 211, 1);
-  }
-
-  .contact_form input,
-  .contact_form textarea {
-    width: 93%;
-    border: none;
-    display: block;
-    margin: 5px auto;
-  }
-
-  .contact_form input {
-    height: 30px;
-  }
-
-  .contact_form textarea {
-    height: 150px;
   }
 
   .contact_submit {
@@ -628,6 +596,18 @@ export default {
     border: none;
     border-radius: 10px;
     padding: 2% 5%;
+  }
+  
+  .contact label {
+    padding: 20px 0;
+  }
+
+
+  .contact input {
+    height: 40px;
+  }
+  .contact textarea {
+    height: 200px;
   }
 
   .company {
@@ -674,6 +654,18 @@ export default {
     .sympathy_contents ul{
       width: 35%;
     }
+    .sns {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .info {
+      width: 80%;
+    }
+    .info img {
+      width: 40%;
+      margin: 10px 0 40px;
+    } 
   }
 
   /* デスクトップ/タブレット横 */
@@ -682,7 +674,7 @@ export default {
       width: 100%;
     }
     .top_eyecatch h2 {
-      font-size: 1.8rem;
+      font-size: 2.2rem;
       width: 40%;
       top: 20%;
       line-height: 50px;
@@ -703,6 +695,11 @@ export default {
     .first-text,
     .second-text {
       text-align: center;
+      font-size: 1.3rem;
+    }
+
+    .contents_block {
+      margin: 10px 0;
     }
 
     .sympathy_block {
@@ -714,10 +711,23 @@ export default {
     }
 
     .sympathy_contents {
-      width: 70%;
+      width: 100%;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .ul_list {
       display: flex;
       align-items: center;
       flex-direction: column;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .sympathy_contents ul{
+      font-size: 1.2rem;
+      width: 50%;
+
     }
 
     .sympathy_contents li {
@@ -730,6 +740,12 @@ export default {
     }
     .sympathy_part button {
       padding: 20px 30px;
+      font-size: 1.4rem;
+      color: rgb(34, 34, 34);
+    }
+
+    .sympathy_part h2 {
+      font-size: 1.8rem;
     }
     
     .prev_appeal {
@@ -755,8 +771,18 @@ export default {
       width: 50%;
       margin: 0 5% 0;
     }
+
+    .content h2 {
+      font-size: 1.8rem; 
+    }
+
+    .content_description,
     .content_description2 {
-      font-size: 1.0rem;
+      font-size: 1.5rem;
+
+    }
+
+    .content_description2 {
       line-height: 30px;
       width: 80%;
       padding: 50px 0;
@@ -790,6 +816,10 @@ export default {
       font-size: 1.5rem;
     }
 
+    .home_layout h2 {
+      font-size: 1.8rem;
+    }
+
     .home_layout img {
       width: 50%;
       margin: 40px 0;
@@ -805,11 +835,22 @@ export default {
     }
     
     .solution_area li {
+      font-size: 1.3rem;
+      line-height: 30px;
       padding: 10px 0;
+      text-align: left;
     }
     .solution_area h3 {
       padding: 10px 0;
       width: 55%;
+    }
+
+    .information h2 {
+      font-size: 2rem;
+    }
+
+    .contact h2 {
+      font-size: 2rem;
     }
 
     .contact_form {
@@ -817,9 +858,13 @@ export default {
     }
     
     .info img {
-      width: 30%;
+      width: 20%;
       margin: 10px 0 40px;
     } 
+
+    .info p {
+      width: 70%;
+    }
 
     .map_img {
       width: 50%;
@@ -828,6 +873,10 @@ export default {
 
     .map_img img {
       width: 80%;
+    }
+
+    .company h2 {
+      font-size: 2rem;
     }
 
     .company_info {

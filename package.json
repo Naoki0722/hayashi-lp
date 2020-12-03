@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "v-lazy-image": "^1.4.0",
     "vue": "^2.6.11",
     "vue-carousel": "^0.18.0",
     "vue-lazyload": "^1.3.3",

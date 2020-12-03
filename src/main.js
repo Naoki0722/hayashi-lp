@@ -5,6 +5,10 @@ import store from './store'
 import VueCarousel from "vue-carousel"
 import VueScrollTo from "vue-scrollto";
 import VueLazyload from "vue-lazyload";
+import { VLazyImagePlugin } from "v-lazy-image";
+
+
+Vue.use(VLazyImagePlugin);
 
 Vue.use(VueCarousel);
 Vue.use(VueScrollTo, {

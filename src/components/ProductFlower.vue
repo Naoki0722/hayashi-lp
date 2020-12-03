@@ -3,7 +3,7 @@
     <div class="lineup_title">
       <h2>ラインナップ</h2>
       <h3>色に応じた商品をご準備しております。</h3>
-      <h4>その他商品については、オンラインショップにて</h4>
+      <h4><a v-scroll-to="'.cta_area'">↓その他商品については、オンラインショップにて↓</a></h4>
     </div>
     <div class="koromo_description">
       <h2 class="koromo">新登場！色衣シリーズ</h2>
@@ -13,7 +13,7 @@
     <div class="product_area">
       <div class="product">
         <div class="product_image">
-          <img src="../assets/koromo_4.jpg" alt="ころもシリーズ">
+          <img v-lazy="require('../assets/koromo_4.jpg')" alt="ころもシリーズ">
         </div>
         <div class="product_description">
           <p>藤色衣</p>
@@ -22,7 +22,7 @@
       </div>
       <div class="product">
         <div class="product_image">
-          <img src="../assets/koromo_3.jpg" alt="ころもシリーズ">
+          <img v-lazy="require('../assets/koromo_3.jpg')" alt="ころもシリーズ">
         </div>
         <div class="product_description">
           <p>綿色衣</p>
@@ -31,7 +31,7 @@
       </div>
       <div class="product">
         <div class="product_image">
-          <img src="../assets/koromo_1.jpg" alt="ころもシリーズ">
+          <img v-lazy="require('../assets/koromo_1.jpg')" alt="ころもシリーズ">
         </div>
         <div class="product_description">
           <p>花色衣</p>
@@ -40,7 +40,7 @@
       </div>
       <div class="product">
         <div class="product_image">
-          <img src="../assets/koromo_2.jpg" alt="ころもシリーズ">
+          <img v-lazy="require('../assets/koromo_2.jpg')" alt="ころもシリーズ">
         </div>
         <div class="product_description">
           <p>鴇色衣</p>
@@ -56,7 +56,7 @@
     <div class="product_area">
       <div class="product">
         <div class="product_image">
-          <img src="../assets/miyuki_1.jpg" alt="ミユキシリーズ">
+          <img v-lazy="require('../assets/miyuki_1.jpg')" alt="ミユキシリーズ">
         </div>
         <div class="product_description">
           <p>スカーレット</p>
@@ -65,7 +65,7 @@
       </div>
       <div class="product">
         <div class="product_image">
-          <img src="../assets/miyuki_2.jpg" alt="ミユキシリーズ">
+          <img v-lazy="require('../assets/miyuki_2.jpg')" alt="ミユキシリーズ">
         </div>
         <div class="product_description">
           <p>ブラームス</p>
@@ -74,7 +74,7 @@
       </div>
       <div class="product">
         <div class="product_image">
-          <img src="../assets/miyuki_3.jpg" alt="ミユキシリーズ">
+          <img v-lazy="require('../assets/miyuki_3.jpg')" alt="ミユキシリーズ">
         </div>
         <div class="product_description">
           <p>ローズ</p>
@@ -83,7 +83,7 @@
       </div>
       <div class="product">
         <div class="product_image">
-          <img src="../assets/miyuki_4.jpg" alt="ミユキシリーズ">
+          <img v-lazy="require('../assets/miyuki_4.jpg')" alt="ミユキシリーズ">
         </div>
         <div class="product_description">
           <p>ライトピンク</p>
@@ -132,6 +132,12 @@
   </div>
 </template>
 
+
+<script>
+export default {
+  
+}
+</script>
 
 <style scoped>
   .lineup_area {
@@ -211,6 +217,7 @@
 
   .shipping th {
     border-right: 1px solid gray;
+    background-color: #ffeeee;
   }
 
   .shipping th,
@@ -260,11 +267,29 @@
 
 /* デスクトップ/タブレット横 */
 @media screen and (min-width: 769px) {
+  .lineup_area p {
+    font-size: 1.3rem;
+  }
   .product_image img {
     width: 70%;
     margin: 20px auto;
   }
+  
+  .lineup_title h2 {
+    font-size: 2rem;
+  }
+  .lineup_title h3,
+  .lineup_title h4 {
+    font-size: 1.4rem;
+    padding-bottom: 10px;
+  }
 
+  .lineup_title h4:hover{
+    color: rgb(253, 146, 164);
+    cursor: pointer;
+    transition: 0.5s;
+
+  }
   .product_description {
     width: 70%;
     font-size: 1.2rem;
@@ -292,6 +317,10 @@
   .shipping td {
     padding: 15px 0;
   }
+
+  .shipping_title {
+    font-size: 2rem;
+  }
   
   .shipping_info p {
     text-align: center;
@@ -299,6 +328,8 @@
 
   .cta_area button {
     padding: 20px 30px;
+    font-size: 1.4rem;
+    color: rgb(34, 34, 34);
   }
 }
 </style>

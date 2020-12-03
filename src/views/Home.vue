@@ -176,7 +176,7 @@
         name="contact"
         method="POST"
         netlify
-        v-on:submit="$router.push('/about')"
+        enctype="application/x-www-form-urlencoded"
         netlify-honeypod="bot-field"
       >
         <input type="hidden" name="form-name" value="contact" />
@@ -185,23 +185,23 @@
             <span>*</span>
             お名前
           </label>
-          <input type="text" id="name" name="name" placeholder="山田太郎" required />
+          <input type="text" id="name" name="name" placeholder="山田太郎" v-model="name" required />
         </div>
         <div>
           <label for="mail">
             <span>*</span>
             メールアドレス
           </label>
-          <input type="email" id="mail" name="email" placeholder="sample@sample.com" required />
+          <input type="email" id="mail" name="email" placeholder="sample@sample.com" v-model="email" required />
         </div>
         <div>
           <label for="msg">
             <span>*</span>
             お問い合わせ内容
           </label>
-          <textarea id="msg" name="message" placeholder="お問い合わせ内容を記載ください" required></textarea>
+          <textarea id="msg" name="message" placeholder="お問い合わせ内容を記載ください" v-model="message" required></textarea>
         </div>
-        <button class="contact_submit" type="submit">送信</button>
+        <button class="contact_submit" type="submit" @click.prevent="handleSubmit">送信</button>
       </form>
     </div>
     <div class="company">
@@ -222,12 +222,36 @@
 
 <script>
 import ProductFlower from '../components/ProductFlower'
+// import axios from 'axios'
 export default {
+  data() {
+    return {
+      name: "",
+      email: "",
+      message: ""
+    }
+  },
   methods: {
     scrollToAnchorPoint(refName) {
       const el = this.$refs[refName]
       el.scrollIntoView({behavior: 'smooth'})
-    }
+    },
+    encode(data) {
+      return Object.keys(data)
+        .map(
+          key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
+        )
+        .join('&');
+    },
+    handleSubmit() {
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: this.encode({ 'form-name': 'contact', ...this.form }),
+      })
+        .then(() => this.$router.push("about"))
+        .catch(error => alert(error));
+    },
   },
   components: {
     ProductFlower,

@@ -189,6 +189,7 @@
 
   .product_description {
     width: 90%;
+    font-size: 0.9rem;
     margin: 0 auto;
     line-height: 40px;
   }
@@ -266,6 +267,7 @@
 
   .product_description {
     width: 70%;
+    font-size: 1.2rem;
     margin: 0 auto;
     line-height: 40px;
   }

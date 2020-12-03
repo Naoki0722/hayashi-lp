@@ -4,7 +4,7 @@
       <div class="top">
         <div class="block block_two">
           <div class="top_eyecatch">
-            <img class="top_image" src="../assets/383637_s.jpg" alt="シクラメンハウス写真">
+            <img class="top_image" src="../assets/383637_s.jpg" alt="トップ画像">
             <h2>人との絆が深まる<br>「キズナ」を繋ぐ花屋さん</h2>
             <h3 class="comp_title">有限会社 林園芸</h3>
           </div>
@@ -174,26 +174,35 @@
     </div>
     <div class="contact">
       <h2>お問い合わせ</h2>
-      <form name="contact" method="POST" netlify netlify-honeypod="bot-field">
+      <form
+        name="contact"
+        method="POST"
+        netlify
+        acction="/About"
+        netlify-honeypod="bot-field"
+      >
         <input type="hidden" name="form-name" value="contact" />
-        <table class="contact_form">
-          <tr>
-            <th>名前</th>
-            <td><input type="text" name="namae" id="name1" placeholder="山田 太郎"></td>
-          </tr>
-          <tr>
-            <th>メールアドレス</th>
-            <td><input type="text" name="email" id="mail" placeholder="taro@test.com"></td>
-          </tr>
-          <tr>
-            <th>電話番号</th>
-            <td><input type="text" name="tell" id="tell" placeholder="090-0000-0000"></td>
-          </tr>
-          <tr>
-            <th>お問い合わせ内容</th>
-            <td><textarea placeholder="お問合せ内容を記載ください"></textarea></td>
-          </tr>
-        </table>
+        <div>
+          <label for="name">
+            お名前
+            <span>*</span>
+          </label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div>
+          <label for="mail">
+            メールアドレス
+            <span>*</span>
+          </label>
+          <input type="email" id="mail" name="email" required />
+        </div>
+        <div>
+          <label for="msg">
+            お問い合わせ内容
+            <span>*</span>
+          </label>
+          <textarea id="msg" name="message" required></textarea>
+        </div>
         <button class="contact_submit" type="submit">送信</button>
       </form>
     </div>
@@ -258,8 +267,10 @@ export default {
     margin-bottom: 10%;
   }
 
+
   .top_image {
-    width: 100%;
+    width
+    : 100%;
     display: block;
     margin: 0 auto;
   }
@@ -546,7 +557,7 @@ export default {
   }
 
   .info img {
-    width: 30%;
+    width: 50%;
     margin: 10px 0 40px;
   }
 
@@ -678,7 +689,7 @@ export default {
 
     }
     .top_image {
-      width: 100%;
+      width: 90%;
     }
 
     .comp_title {
@@ -804,6 +815,11 @@ export default {
     .contact_form {
       width: 50%;
     }
+    
+    .info img {
+      width: 30%;
+      margin: 10px 0 40px;
+    } 
 
     .map_img {
       width: 50%;

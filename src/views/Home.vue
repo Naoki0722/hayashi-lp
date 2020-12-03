@@ -176,7 +176,7 @@
         name="contact"
         method="POST"
         netlify
-        acction="/About"
+        action="/about"
         netlify-honeypod="bot-field"
       >
         <input type="hidden" name="form-name" value="contact" />

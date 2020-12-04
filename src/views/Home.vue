@@ -172,36 +172,35 @@
     <div class="contact">
       <h2>お問い合わせ</h2>
       <p>※下記の項目をご入力ください</p>
-      <form
-        name="contact"
-        method="POST"
-        netlify
-        enctype="application/x-www-form-urlencoded"
-        netlify-honeypod="bot-field"
-      >
+      <form name="contact" @submit.prevent="onSubmit">
         <input type="hidden" name="form-name" value="contact" />
         <div>
           <label for="name">
             <span>*</span>
             お名前
           </label>
-          <input type="text" id="name" name="name" placeholder="山田太郎" v-model="form.name" required />
+          <input type="text" id="name" name="name" placeholder="山田太郎" v-model="name" required />
         </div>
         <div>
           <label for="mail">
             <span>*</span>
             メールアドレス
           </label>
-          <input type="email" id="mail" name="email" placeholder="sample@sample.com" v-model="form.email" required />
+          <input type="email" id="mail" name="email" placeholder="sample@sample.com" v-model="email" required />
         </div>
         <div>
           <label for="msg">
             <span>*</span>
             お問い合わせ内容
           </label>
-          <textarea id="msg" name="message" placeholder="お問い合わせ内容を記載ください" v-model="form.message" required></textarea>
+          <textarea id="msg" name="content" placeholder="お問い合わせ内容を記載ください" v-model="content" required></textarea>
         </div>
-        <button class="contact_submit" type="submit" @click.prevent="handleSubmit">送信</button>
+        <button class="contact_submit" type="submit" >送信</button>
+      </form>
+      <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+        <input type="text" name="name" />
+        <input type="email" name="email" />
+        <textarea name="content"></textarea>
       </form>
     </div>
     <div class="company">
@@ -222,40 +221,33 @@
 
 <script>
 import ProductFlower from '../components/ProductFlower'
-// import axios from 'axios'
+import axios from 'axios'
 export default {
   data() {
     return {
-      form: {
-        name: "",
-        email: "",
-        message: ""
-      }
+      name: "",
+      email: "",
+      content: ""
     }
   },
   methods: {
-    scrollToAnchorPoint(refName) {
-      const el = this.$refs[refName]
-      el.scrollIntoView({behavior: 'smooth'})
-    },
-    encode(data) {
-      return Object.keys(data)
-        .map(
-          key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
-        )
-        .join('&');
-    },
-    handleSubmit() {
-      fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: this.encode({ 'form-name': 'contact', ...this.form }),
-      })
-        .then(() => 
-          this.$router.push("about"),
-        )
-        .catch(error => alert(error));
-    },
+    onSubmit() {
+      const params = new URLSearchParams()
+      params.append('form-name', 'contact')// Forms使うのに必要
+      params.append('name', this.name)
+      params.append('email', this.email)
+      params.append('content', this.content)
+
+      axios
+        .post('/', params)
+        .then(() => {
+          this.$router.push('about')
+        })
+        .catch(() => {
+          this.$router.push("about");
+        })
+
+    }
   },
   components: {
     ProductFlower,

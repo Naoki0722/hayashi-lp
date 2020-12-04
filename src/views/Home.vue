@@ -185,21 +185,21 @@
             <span>*</span>
             お名前
           </label>
-          <input type="text" id="name" name="name" placeholder="山田太郎" v-model="name" required />
+          <input type="text" id="name" name="name" placeholder="山田太郎" @input="ev => form.name = ev.target.value" required />
         </div>
         <div>
           <label for="mail">
             <span>*</span>
             メールアドレス
           </label>
-          <input type="email" id="mail" name="email" placeholder="sample@sample.com" v-model="email" required />
+          <input type="email" id="mail" name="email" placeholder="sample@sample.com" @input="ev => form.email = ev.target.value" required />
         </div>
         <div>
           <label for="msg">
             <span>*</span>
             お問い合わせ内容
           </label>
-          <textarea id="msg" name="message" placeholder="お問い合わせ内容を記載ください" v-model="message" required></textarea>
+          <textarea id="msg" name="message" placeholder="お問い合わせ内容を記載ください" @input="ev => form.message = ev.target.value" required></textarea>
         </div>
         <button class="contact_submit" type="submit" @click.prevent="handleSubmit">送信</button>
       </form>
@@ -231,6 +231,7 @@ export default {
         email: "",
         message: ""
       }
+    }
   },
   methods: {
     scrollToAnchorPoint(refName) {

@@ -172,8 +172,8 @@
     <div class="contact">
       <h2>お問い合わせ</h2>
       <p>※下記の項目をご入力ください</p>
-      <form name="contact-form" @submit.prevent="onSubmit">
-        <input type="hidden" name="form-name" value="contact-form" />
+      <form name="contact" @submit.prevent="onSubmit">
+        <input type="hidden" name="form-name" value="contact" />
         <div>
           <label for="name">
             <span>*</span>
@@ -193,14 +193,14 @@
             <span>*</span>
             お問い合わせ内容
           </label>
-          <textarea id="msg" name="content" placeholder="お問い合わせ内容を記載ください" v-model="content" required></textarea>
+          <textarea id="msg" name="message" placeholder="お問い合わせ内容を記載ください" v-model="message" required></textarea>
         </div>
         <button class="contact_submit" type="submit" >送信</button>
       </form>
-      <form name="contact-form" netlify netlify-honeypot="bot-field" hidden>
+      <form name="contact" netlify netlify-honeypot="bot-field" hidden>
         <input type="text" name="name" />
         <input type="email" name="email" />
-        <textarea name="content"></textarea>
+        <textarea name="message"></textarea>
       </form>
     </div>
     <div class="company">
@@ -227,17 +227,17 @@ export default {
     return {
       name: "",
       email: "",
-      content: ""
+      message: ""
     }
   },
   methods: {
     onSubmit() {
       const params = new URLSearchParams()
-      params.append('form-name', 'contact-form')// Forms使うのに必要
+      params.append('form-name', 'contact')// Forms使うのに必要
       params.append('name', this.name)
       params.append('email', this.email)
-      params.append('content', this.content)
-      console.log(params.getAll('content'))
+      params.append('message', this.message)
+      console.log(params.getAll('message'))
 
       axios
         .post('/', params)

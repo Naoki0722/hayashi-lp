@@ -241,10 +241,10 @@ export default {
       axios
         .post('/', params)
         .then(() => {
-          this.$router.push('about')
+          this.$router.push('thanks')
         })
         .catch(() => {
-          this.$router.push("about");
+          this.$router.push("thanks");
         })
 
     }

@@ -172,8 +172,8 @@
     <div class="contact">
       <h2>お問い合わせ</h2>
       <p>※下記の項目をご入力ください</p>
-      <form name="contact" @submit.prevent="onSubmit">
-        <input type="hidden" name="form-name" value="contact" />
+      <form name="contact2" @submit.prevent="onSubmit">
+        <input type="hidden" name="form-name" value="contact2" />
         <div>
           <label for="name">
             <span>*</span>
@@ -197,7 +197,7 @@
         </div>
         <button class="contact_submit" type="submit" >送信</button>
       </form>
-      <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+      <form name="contact2" netlify netlify-honeypot="bot-field" hidden>
         <input type="text" name="name" />
         <input type="email" name="email" />
         <textarea name="message"></textarea>
@@ -233,7 +233,7 @@ export default {
   methods: {
     onSubmit() {
       const params = new URLSearchParams()
-      params.append('form-name', 'contact')// Forms使うのに必要
+      params.append('form-name', 'contact2')// Forms使うのに必要
       params.append('name', this.name)
       params.append('email', this.email)
       params.append('message', this.message)

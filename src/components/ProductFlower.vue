@@ -147,7 +147,7 @@ export default {
 
   .lineup_title {
     text-align: center;
-    padding: 40px 0 20px;
+    padding-top: 40px;
   }
 
   .lineup_title h2 {
@@ -160,9 +160,9 @@ export default {
   }
 
   .koromo {
-    color: red;
+    color: #ff6767;
     font-size: 1.4rem;
-    padding: 50px 0 20px;
+    padding: 40px 0 20px;
     font-weight: bold;
   }
   .koromo_description {
@@ -240,7 +240,7 @@ export default {
   .cta_area p {
     padding: 20px;
     font-size: 1.2rem;
-    color: red;
+    color: #ff6767;
     text-decoration:  underline;
     font-weight: bold;
   }

@@ -14,7 +14,7 @@ Vue.use(VueCarousel);
 Vue.use(VueScrollTo, {
   duration: 700,
   easing: [0, 0, 0.1, 1],
-  offset: -80,
+  offset: -90,
 });
 Vue.use(VueLazyload, {
   preLoad: 1.3,

@@ -1,21 +1,65 @@
 <template>
   <div class="about">
-    <h1>お問い合わせありがとうございました！</h1>
-    <router-link to="/">
-      <button>topページへ戻る</button>
-    </router-link>
+    <!-- ナビゲーション非表示 -->
+    <Header :senddata="flag"></Header>
+    <div class="thanks">
+      <p>お問い合わせ<br class="smp">ありがとうございました！</p>
+      <router-link to="/">
+        <button>topページへ戻る</button>
+      </router-link>
+    </div>
   </div>
 </template>
 
+<script>
+import Header from '../components/Header'
+export default {
+  data() {
+    return {
+      flag: true
+    }
+  },
+  components: {
+    Header,
+  }
+}
+</script>
+
 <style scoped>
-.about h1 {
-  margin: 40% 20%;
-  text-align: center;
+.thanks {
+  margin-top: -40px;
+  width: 100vw;
+  height: 100vh;
 }
 
-.about button {
+.thanks p {
+  padding: 50% 0 20%;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.thanks button {
   display: block;
-  margin: 10% auto;
+  margin: 0 auto;
   padding: 10px 5%;
+  background-color: #FFDEDE;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.header-nav,
+.hamburger,
+.menu-content {
+  display: none;
+}
+
+@media screen and (min-width: 769px) {
+  .thanks p {
+    padding: 20% 0;
+  }
+  .smp {
+    display: none;
+  }
 }
 </style>

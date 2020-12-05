@@ -3,16 +3,22 @@
     <div class="header-title">
       <h1>Hayashi-engei</h1>
     </div>
-    <div class="header-nav">
+    <!-- thanksページではナビゲーション非表示 -->
+    <div class="dummy" v-if="senddata">
+    </div>
+    <div class="header-nav" v-else>
       <ul class="flex_content">
-        <li><a v-scroll-to="'.summary'">シクラメンとは？</a></li>
+        <li><a v-scroll-to="'.summary'">当社のシクラメン</a></li>
         <li><a v-scroll-to="'.benefit_contents'">選ばれる理由</a></li>
         <li><a v-scroll-to="'.lineup_area'">ラインナップ</a></li>
         <li><a v-scroll-to="'.information'">お役立ち情報</a></li>
-        <li><a v-scroll-to="'.company'">会社概要</a></li>
+        <li><a v-scroll-to="'.contact'">お問い合わせ</a></li>
       </ul>
     </div>
-    <div class="hamburger" @click="humberger()" :class="{'active':isClass}">
+    <!-- thanksページではナビゲーション非表示 -->
+    <div class="dummy" v-if="senddata">
+    </div>
+    <div class="hamburger" @click="humberger()" :class="{'active':isClass}" v-else>
       <span></span>
       <span></span>
       <span></span>
@@ -21,7 +27,7 @@
       <p class="menu-title">Hayashi-engei</p>
       <ul class="menu-content_inner">
         <li>
-          <a v-scroll-to="'.summary'">シクラメンとは？</a>
+          <a v-scroll-to="'.summary'">当社のシクラメン</a>
         </li>
         <li>
           <a v-scroll-to="'.benefit_contents'">選ばれる理由</a>
@@ -33,7 +39,7 @@
           <a v-scroll-to="'.information'">お役立ち情報</a>
         </li>
         <li>
-          <a v-scroll-to="'.company'">会社概要</a>
+          <a v-scroll-to="'.contact'">お問い合わせ</a>
         </li>
       </ul>
     </nav>
@@ -42,10 +48,11 @@
 
 <script>
 export default {
+  props: ["senddata"],
   data() {
     return {
       isClass: false,
-      testBlock: "contact"
+      testBlock: "contact",
     };
   },
   methods: {

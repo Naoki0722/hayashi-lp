@@ -149,11 +149,16 @@
             <p>ピンクのシクラメンは、「憧れ」と「内気」</p>
             <p>赤いシクラメンは、「嫉妬」</p>
           </div>
+          <div class="flower_merit">
+            <p>シクラメンは次々に咲き続けます。その様子は家族の絆が深まるとも言われ、縁起の良い花です。<p>
+            <p>また、玄関等に置くと風水的にも運気が上がると言われています。</p>
+          </div>
         </div>
         <div class="home_layout">
           <h2>これだけでもお部屋が華やかに！</h2>
           <img src="../assets/burano-1962852_640.jpg" alt="ベネフィット">
           <div class="delimiter"></div>
+          <!-- スライドショー -->
         </div>
         <div class="problem_solving">
           <div class="problem_content">
@@ -564,6 +569,17 @@ export default {
     color: rgb(255, 124, 222);
   }
 
+  .flower_merit  {
+    line-height: 25px;
+    width: 85%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .flower_merit p {
+    padding: 10px 0 5px;
+  }
+
   .flower_detail p:nth-of-type(1) {
     color: white;
     text-shadow: 2px 1px 3px #bdbdbd;
@@ -770,6 +786,13 @@ export default {
       width: 40%;
       margin: 10px 0 40px;
     } 
+
+    .flower_detail  {
+      margin-bottom: 20px;
+    }
+    .flower_merit {
+      width: 95%;
+    }
   }
 
   /* デスクトップ/タブレット横 */
@@ -953,6 +976,12 @@ export default {
     .flower_detail p {
       padding: 15px 0;
       font-size: 1.5rem;
+    }
+
+
+    .flower_merit {
+      width: 95%;
+      font-size: 1.1rem;
     }
 
     .home_layout h2 {

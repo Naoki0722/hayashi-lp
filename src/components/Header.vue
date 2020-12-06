@@ -208,7 +208,7 @@ header {
     margin: 0 auto;
   }
   .flex_content li {
-    margin: 0 1%;
+    padding: 0 1%;
   }
 
   .flex_content a:hover {

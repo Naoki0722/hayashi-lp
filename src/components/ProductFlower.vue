@@ -3,7 +3,7 @@
     <div class="lineup_title">
       <h2>ラインナップ</h2>
       <h3>色に応じた商品をご準備しております。</h3>
-      <h4><a v-scroll-to="'.cta_area'">↓その他商品については、オンラインショップにて↓</a></h4>
+      <h4><a v-scroll-to="'.cta_area'">その他商品については、オンラインショップにて</a></h4>
     </div>
     <div class="koromo_description">
       <h2 class="koromo">新登場！色衣シリーズ</h2>
